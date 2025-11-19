@@ -1,0 +1,114 @@
+:root {
+  --primary-color: #c5a17f;
+  --bg-dark: #121212;
+  --bg-light: #f0f0f0;
+  --card-bg-dark: #1f1f1f;
+  --card-bg-light: #fff;
+  --text-dark: #f7f7f7;
+  --text-light: #121212;
+  --input-bg-dark: #2b2b2b;
+  --input-bg-light: #e5e5e5;
+  --border-dark: #333;
+  --border-light: #ccc;
+  --button-bg-dark: #f7f5f0;
+  --button-text-dark: #1f1f1f;
+  --button-bg-light: #855e42;
+  --button-text-light: #fff;
+  --error-dark: #ff6666;
+  --error-light: #dc3545;
+}
+
+body.dark-theme {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+body.light-theme {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+.contact-form-card,
+.contact-details-card {
+  background-color: var(--card-bg-dark);
+  transition: 0.3s;
+}
+body.light-theme .contact-form-card,
+body.light-theme .contact-details-card {
+  background-color: var(--card-bg-light);
+}
+
+.contact-form-card .title,
+.contact-details-card .title {
+  color: var(--primary-color);
+}
+
+.form-control,
+.form-select {
+  background-color: var(--input-bg-dark);
+  color: var(--text-dark);
+  border: 1px solid var(--border-dark);
+  transition: 0.3s;
+}
+body.light-theme .form-control,
+body.light-theme .form-select {
+  background-color: var(--input-bg-light);
+  color: var(--text-light);
+  border: 1px solid var(--border-light);
+}
+
+.send-button {
+  background-color: var(--button-bg-dark);
+  color: var(--button-text-dark);
+}
+body.light-theme .send-button {
+  background-color: var(--button-bg-light);
+  color: var(--button-text-light);
+}
+
+.form-control.is-invalid,
+.form-select.is-invalid {
+  border-color: var(--error-dark);
+}
+body.light-theme .form-control.is-invalid,
+body.light-theme .form-select.is-invalid {
+  border-color: var(--error-light);
+}
+
+.theme-toggle-button {
+  position: fixed;
+  top: 115px;
+  right: 20px;
+  z-index: 9999;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+body.dark-theme .form-control,
+body.dark-theme .form-select,
+body.dark-theme textarea {
+  background-color: var(--input-bg-dark);
+  color: var(--text-dark); /* النص داخل الحقول */
+  border: 1px solid var(--border-dark);
+}
+
+body.dark-theme .form-control::placeholder,
+body.dark-theme textarea::placeholder {
+  color: rgba(
+    247,
+    247,
+    247,
+    0.5
+  ); /* Placeholder فاتح عشان يظهر على الخلفية الداكنة */
+}
+
+body.dark-theme .send-button {
+  background-color: var(--button-bg-dark);
+  color: var(--button-text-dark);
+}
+body.dark-theme .contact-form-card,
+body.dark-theme .detail-item,
+body.dark-theme .map-title,
+body.dark-theme .description {
+  color: var(--text-dark);
+}

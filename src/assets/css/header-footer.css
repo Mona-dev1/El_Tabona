@@ -1,0 +1,143 @@
+:root {
+  --bg: #0f0f10;
+  --card: #121214;
+  --muted: #bdbcbc;
+  --accent: rgb(167, 88, 18);
+  --glass: rgba(255, 255, 255, 0.03);
+  --radius: 14px;
+  --gap: 24px;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+}
+* {
+  box-sizing: border-box;
+}
+
+#header {
+  background-color: #924d11ff;
+  font-family: "Allura", cursive;
+  color: #fff;
+}
+
+/* FULL WIDTH NAV */
+.brown-nav {
+  width: 100%;
+  background-color: #924d11ff; /* اللون اللي طلبتيه */
+  padding: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* container */
+.brown-nav-container {
+  width: 100%;
+  margin: auto;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LEFT LOGO */
+.brown-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brown-logo img {
+  width: 65px;
+  height: 65px;
+}
+
+.brown-logo h1 {
+  color: #fff;
+  font-family: allura;
+
+  font-size: 30px;
+}
+
+/* CENTER LINKS */
+.brown-links {
+  display: flex;
+  gap: 35px;
+  font-family: DM Sans;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  opacity: 1;
+}
+
+.brown-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+.brown-links a:hover {
+  color: #f7d6b3;
+}
+
+/* RIGHT ICONS */
+.brown-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.brown-icons i {
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.brown-icons i:hover {
+  color: #f7d6b3;
+}
+/*footer*/
+#footer {
+  padding: 20px 40px;
+  background-color: #031c1f;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between; /* النصوص على الشمال والأيقونات على اليمين */
+  align-items: center; /* مهم جدًا عشان يبقى كل شيء في منتصف السطر */
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+#footer .footer-left {
+  line-height: 1;
+  justify-content: left;
+}
+
+#footer .icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: right;
+}
+
+#footer .icons a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1;
+  transition: transform 0.3s, color 0.3s;
+}
+
+#footer .icons a:hover {
+  color: #f39c12;
+  transform: scale(1.2);
+}
+
+@media (max-width: 600px) {
+  #footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}

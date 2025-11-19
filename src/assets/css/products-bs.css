@@ -1,0 +1,56 @@
+:root {
+  --accent: rgb(167, 88, 18);
+  --muted: #bdbcbc;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.btn.active {
+  background-color: var(--accent) !important;
+  color: #fff !important;
+  box-shadow: 0 0 0 2px rgba(167, 88, 18, 0.4);
+}
+
+.form-select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 6px rgba(167, 88, 18, 0.4);
+}
+.filters-box {
+  background: #171a1fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 1px #171a1f12, 0px 0px 2px #171a1f1f;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+}
+
+.category-btn {
+  background: transparent;
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+.category-btn:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+.card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  border-radius: 16px;
+  padding: 5px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  box-shadow: 0 8px 30px rgba(2, 2, 2, 0.6);
+}
+.card .card-text {
+  color: #bdbcbc !important;
+}

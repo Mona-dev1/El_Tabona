@@ -1,0 +1,46 @@
+:root {
+  --accent: rgb(167, 88, 18);
+  --muted: #bdbcbc;
+}
+
+.product-gallery {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+.thumbs img.active {
+  border-color: var(--accent);
+}
+
+.btn-warning {
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+.btn-warning:hover {
+  background-color: rgba(167, 88, 18, 0.9);
+  border-color: rgba(167, 88, 18, 0.9);
+}
+
+.form-select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 6px rgba(167, 88, 18, 0.4);
+}
+
+.section-box {
+  background: #111;
+  padding: 18px;
+  border-radius: 12px;
+}
+
+.section-box .card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  ) !important;
+  border-radius: 16px !important;
+  padding: 5px !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(255, 255, 255, 0.03) !important;
+  box-shadow: 0 8px 30px rgba(2, 2, 2, 0.6) !important;
+}

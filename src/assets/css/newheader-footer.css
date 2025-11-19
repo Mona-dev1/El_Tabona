@@ -1,0 +1,28 @@
+.navbar-collapse {
+  text-align: center;
+}
+
+header .container {
+  padding: 0;
+}
+
+/* footer.css */
+
+/* Hover effect */
+.icons a {
+  transition: transform 0.3s, color 0.3s;
+}
+
+.icons a:hover {
+  color: #f39c12 !important;
+  transform: scale(1.2);
+}
+
+/* Responsive behavior same as original */
+@media (max-width: 600px) {
+  footer {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 10px;
+  }
+}
