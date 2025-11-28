@@ -11,9 +11,9 @@ export default function ProductGrid({
     (p) => activeFilter === "all" || p.category === activeFilter
   );
   if (sort === "price-asc")
-    filtered = filtered.sort((a, b) => a.price - b.price);
+    filtered = filtered.sort((a, b) => parseInt(a.price) - parseInt(b.price));
   if (sort === "price-desc")
-    filtered = filtered.sort((a, b) => b.price - a.price);
+    filtered = filtered.sort((a, b) => parseInt(b.price) - parseInt(a.price));
   if (sort === "newest") filtered = filtered.reverse();
 
   return (

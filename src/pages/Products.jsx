@@ -3,14 +3,13 @@ import productsData from "../data/products.json";
 import FilterBar from "../components/FilterBar";
 import ProductGrid from "../components/ProductGrid";
 import { useNavigate } from "react-router-dom";
-import "../assets/css/products-bs.css"; 
+import "../assets/css/products-bs.css";
 
 export default function Products({ addToCart }) {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [activeFilter, setActiveFilter] = useState("all");
   const [sort, setSort] = useState("recommended");
-
   useEffect(() => {
     setProducts(productsData);
   }, []);
@@ -40,7 +39,6 @@ export default function Products({ addToCart }) {
         sort={sort}
         setSort={setSort}
       />
-      
 
       <ProductGrid
         products={products}
