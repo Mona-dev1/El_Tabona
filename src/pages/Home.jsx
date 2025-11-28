@@ -38,7 +38,10 @@ export default function HeroSection({ addToCart }) {
 
         <div className="cards-wrapper">
           <div className="baked-card">
-            <img src="/images/Pink-Velvet-Cucpakes.jpg" className="baked-img" />
+            <img
+              src="/El_Tabona/images/Pink-Velvet-Cucpakes.jpg"
+              className="baked-img"
+            />
             <div className="card-body">
               <h3 className="baked-name">Pink Velvet Cupcakes</h3>
               <p className="baked-price">$4.50</p>
@@ -51,7 +54,7 @@ export default function HeroSection({ addToCart }) {
 
           <div className="baked-card">
             <img
-              src="/images/Artisan-Sourdough-Bread.jpg"
+              src="/El_Tabona/images/Artisan-Sourdough-Bread.jpg"
               className="baked-img"
             />
             <div className="card-body">
@@ -66,7 +69,7 @@ export default function HeroSection({ addToCart }) {
 
           <div className="baked-card">
             <img
-              src="/images/Chocolate-Croissants-min.jpg"
+              src="/El_Tabona/images/Chocolate-Croissants-min.jpg"
               className="baked-img"
             />
             <div className="card-body">
@@ -85,7 +88,11 @@ export default function HeroSection({ addToCart }) {
 
         <div className="signature-cards">
           <div className="sig-card">
-            <img src="/images/macaron.jpg" className="sig-img" alt="Macarons" />
+            <img
+              src="/El_Tabona/images/macaron.jpg"
+              className="sig-img"
+              alt="Macarons"
+            />
 
             <div className="sig-info">
               <h3 className="sig-name">Lavender Honey Macarons</h3>
@@ -104,7 +111,7 @@ export default function HeroSection({ addToCart }) {
                       name: "Lavender Honey Macarons",
                       price: 24.0,
                       qty: 1,
-                      img: "/images/macaron.jpg",
+                      img: "/El_Tabona/images/macaron.jpg",
                     })
                   }
                 >
@@ -116,7 +123,7 @@ export default function HeroSection({ addToCart }) {
 
           <div className="sig-card">
             <img
-              src="/images/brownies.jpg"
+              src="/El_Tabona/images/brownies.jpg"
               className="sig-img"
               alt="Brownies"
             />
@@ -138,7 +145,7 @@ export default function HeroSection({ addToCart }) {
                       name: "Artisan Sourdough Loaf",
                       price: 9.99,
                       qty: 1,
-                      img: "/images/Artisan-Sourdough-Bread.jpg",
+                      img: "/El_Tabona/images/Artisan-Sourdough-Bread.jpg",
                     })
                   }
                 >
@@ -149,7 +156,11 @@ export default function HeroSection({ addToCart }) {
           </div>
 
           <div className="sig-card">
-            <img src="/images/muffin.jpg" className="sig-img" alt="Muffins" />
+            <img
+              src="/El_Tabona/images/muffin.jpg"
+              className="sig-img"
+              alt="Muffins"
+            />
 
             <div className="sig-info">
               <h3 className="sig-name">Classic Blueberry Muffins</h3>
@@ -167,7 +178,7 @@ export default function HeroSection({ addToCart }) {
                       name: "Double Chocolate Croissant",
                       price: 5.25,
                       qty: 1,
-                      img: "/images/Chocolate-Croissants-min.jpg",
+                      img: "/El_Tabona/images/Chocolate-Croissants-min.jpg",
                     })
                   }
                 >
@@ -184,7 +195,7 @@ export default function HeroSection({ addToCart }) {
         <div className="cards">
           <div className="card">
             <img
-              src="/images/2.jpg"
+              src="/El_Tabona/images/2.jpg"
               alt="Customer"
               className="avatar"
               class="testimonial-img"
@@ -199,7 +210,7 @@ export default function HeroSection({ addToCart }) {
 
           <div className="card">
             <img
-              src="/images/1.jpg"
+              src="/El_Tabona/images/1.jpg"
               alt="Customer"
               className="avatar"
               class="testimonial-img"
@@ -214,7 +225,7 @@ export default function HeroSection({ addToCart }) {
 
           <div className="card">
             <img
-              src="/images/3.jpg"
+              src="/El_Tabona/images/3.jpg"
               alt="Customer"
               className="avatar"
               class="testimonial-img"
