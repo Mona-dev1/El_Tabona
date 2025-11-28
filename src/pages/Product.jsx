@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import products from "../data/products.json";
 import Modal from "../components/QRmodal";
 import Section from "../components/Section";
 import "../assets/css/product-bs.css";
+import productsData from "../data/products.json";
 
-export default function Product() {
+export default function Product({ addToCart }) {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [product, setProduct] = useState(null);
   const [mainImg, setMainImg] = useState("");
   const [qty, setQty] = useState(1);
@@ -28,11 +30,25 @@ export default function Product() {
 
   const images = Array.isArray(product.image) ? product.image : [product.image];
 
+  const handleAddToCart = () => {
+    addToCart({
+      id: product.id,
+      name: product.title,
+      price: product.price,
+      img: Array.isArray(product.image) ? product.image[0] : product.image,
+      qty: qty,
+    });
+  };
+
+  const handleBuyNow = () => {
+    handleAddToCart();
+    navigate("/cart");
+  };
+  const section1 = productsData.filter((c) => c.id !== product.id).slice(0, 4);
+  const section2 = productsData.filter((c) => c.id !== product.id).slice(4, 8);
   return (
     <div className="container py-4 product-page">
-      {/* TOP SECTION */}
       <div className="row g-4 product-top">
-        {/* GALLERY */}
         <div className="col-lg-6 d-flex flex-column align-items-center product-gallery p-3 rounded shadow-sm">
           <img
             id="mainImage"
@@ -76,7 +92,6 @@ export default function Product() {
           </div>
         </div>
 
-        {/* PRODUCT INFO */}
         <div className="col-lg-6 product-info text-white">
           <h2
             className="mb-3"
@@ -88,7 +103,6 @@ export default function Product() {
           <p className="fw-bold text-warning fs-5">{product.price}</p>
           <p className="text-white mb-3">{product.desc}</p>
 
-          {/* Options */}
           <div className="mb-3">
             <label className="form-label fw-bold">Size</label>
             <select className="form-select mb-2 bg-dark text-white border-secondary">
@@ -103,7 +117,6 @@ export default function Product() {
             </select>
           </div>
 
-          {/* Quantity */}
           <div className="d-flex align-items-center gap-2 mb-3">
             <button
               className="btn btn-warning fw-bold"
@@ -120,12 +133,17 @@ export default function Product() {
             </button>
           </div>
 
-          {/* Actions */}
           <div className="d-flex gap-2 mb-3 flex-wrap">
-            <button className="btn btn-warning flex-grow-1 fw-bold">
+            <button
+              className="btn btn-warning flex-grow-1 fw-bold"
+              onClick={handleAddToCart}
+            >
               Add to Cart
             </button>
-            <button className="btn btn-outline-light flex-grow-1 fw-bold">
+            <button
+              className="btn btn-outline-light flex-grow-1 fw-bold"
+              onClick={handleBuyNow}
+            >
               Buy Now
             </button>
           </div>
@@ -136,68 +154,15 @@ export default function Product() {
         </div>
       </div>
 
-      {/* Frequently Bought Together */}
-      <Section
-        title="Frequently Bought Together"
-        items={[
-          {
-            name: "Chocolate Croissant",
-            img: "https://picsum.photos/220?1",
-            price: "$3.00",
-          },
-          {
-            name: "Mint Cupcake",
-            img: "https://picsum.photos/220?2",
-            price: "$4.00",
-          },
-          {
-            name: "Vanilla Ice Cream",
-            img: "https://picsum.photos/220?3",
-            price: "$2.50",
-          },
-          {
-            name: "Honey Roll",
-            img: "https://picsum.photos/220?4",
-            price: "$3.50",
-          },
-        ]}
-      />
+      <Section title="Frequently Bought Together" items={section1} />
+      <Section title="People Also Loved" items={section2} />
 
-      {/* People Also Loved */}
-      <Section
-        title="People Also Loved"
-        items={[
-          {
-            name: "Blueberry Muffin",
-            img: "https://picsum.photos/220?5",
-            price: "$2.80",
-          },
-          {
-            name: "Butter Croissant",
-            img: "https://picsum.photos/220?6",
-            price: "$2.00",
-          },
-          {
-            name: "Strawberry Tart",
-            img: "https://picsum.photos/220?7",
-            price: "$3.80",
-          },
-          {
-            name: "Chocolate Chip Cookie",
-            img: "https://picsum.photos/220?8",
-            price: "$1.50",
-          },
-        ]}
-      />
-
-      {/* 3D Modal */}
       {modal3D && (
         <Modal onClose={() => setModal3D(false)}>
           <img src={mainImg} className="img-fluid modal-img rounded" />
         </Modal>
       )}
 
-      {/* QR Modal */}
       {modalQR && (
         <Modal onClose={() => setModalQR(false)}>
           <h3 className="mb-3">Scan to view product</h3>

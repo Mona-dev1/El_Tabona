@@ -1,157 +1,158 @@
 [
   {
     "id": 1,
-    "title": "Chocolate Brownie",
-    "desc": "Squares of melted chocolate",
-    "price": "24.00",
+    "title": "Chocolate Cake",
+    "desc": "circle chocolate cake.",
+    "price": "24.00$",
     "category": "cakes",
     "image": [
-      "./img/products_imges/cakes/pexels-delphine-hourlay-91322-691147.jpg",
-      "https://images.pexels.com/photos/302322/pexels-photo-302322.jpeg",
-      "https://images.pexels.com/photos/357573/pexels-photo-357573.jpeg"
+      "/images/products_images/cakes/cake0.jpg",
+      "/images/products_images/cakes/cake2.jpg",
+      "/images/products_images/cakes/cake1.jpg"
     ]
   },
   {
     "id": 2,
-    "title": "Sourdough Loaf",
-    "desc": "Slow-fermented sourdough.",
-    "price": "27.00",
+    "title": "heart biscuit",
+    "desc": "Sweet heart, sweet bite.",
+    "price": "27.00$",
     "category": "snacks",
     "image": [
-      "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg",
-      "https://images.pexels.com/photos/209404/pexels-photo-209404.jpeg",
-      "https://images.pexels.com/photos/96479/pexels-photo-96479.jpeg"
+      "/images/products_images/snack/heart.jpg",
+      "/images/products_images/snack/sn.jpg",
+      "/images/products_images/snack/sna (2).jpg"
     ]
   },
   {
     "id": 3,
     "title": "Butter Croissant",
     "desc": "Buttery, flaky goodness.",
-    "price": "24.50",
+    "price": "24.50$",
     "category": "pastries",
     "image": [
-      "https://images.pexels.com/photos/357573/pexels-photo-357573.jpeg",
-      "https://images.pexels.com/photos/302680/pexels-photo-302680.jpeg",
-      "https://images.pexels.com/photos/209090/pexels-photo-209090.jpeg"
+      "/images/products_images/pastries/snack10.jpg",
+      "/images/products_images/pastries/ksnack1.jpg",
+      "/images/products_images/pastries/snac6.jpg"
     ]
   },
   {
     "id": 4,
     "title": "Chocolate Chip Cookies",
     "desc": "Classic chocolate chips.",
-    "price": "19.00",
+    "price": "19.00$",
     "category": "cookies",
     "image": [
-      "https://images.pexels.com/photos/230325/pexels-photo-230325.jpeg",
-      "https://images.pexels.com/photos/41100/pexels-photo-41100.jpeg",
-      "https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg"
+      "/images/products_images/cookies/cook0.jpg",
+      "/images/products_images/cookies/cook1.jpg",
+      "/images/products_images/cookies/cook2.jpg"
     ]
   },
   {
     "id": 5,
-    "title": "Matcha Cake",
-    "desc": "Fine green tea sponge.",
-    "price": "32.00",
+    "title": "Honey Cake",
+    "desc": "A slice of pure sweetness.",
+    "price": "32.00$",
     "category": "cakes",
     "image": [
-      "https://images.pexels.com/photos/302472/pexels-photo-302472.jpeg",
-      "https://images.pexels.com/photos/227432/pexels-photo-227432.jpeg",
-      "https://images.pexels.com/photos/853004/pexels-photo-853004.jpeg"
+      "/images/products_images/cakes/dc0.jpg",
+      "/images/products_images/cakes/dc3.jpg",
+      "/images/products_images/cakes/dc2.jpg"
     ]
   },
   {
     "id": 6,
-    "title": "Country Bread",
-    "desc": "Rustic crust and soft crumb.",
-    "price": "22.00",
+    "title": "mini pizza",
+    "desc": "Small slice, big love.",
+    "price": "22.00$",
     "category": "snacks",
     "image": [
-      "https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg",
-      "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg",
-      "https://images.pexels.com/photos/784633/pexels-photo-784633.jpeg"
+      "/images/products_images/snack/min.jpg",
+      "/images/products_images/snack/mini.jpg",
+      "/images/products_images/snack/minii2.jpg"
     ]
   },
   {
     "id": 7,
     "title": "Brioche Loaf",
     "desc": "Buttery pastry bread.",
-    "price": "25.00",
+    "price": "25.00$",
     "category": "pastries",
     "image": [
-      "https://images.pexels.com/photos/302772/pexels-photo-302772.jpeg",
-      "https://images.pexels.com/photos/1400172/pexels-photo-1400172.jpeg"
+      "/images/products_images/pastries/pas.jpg",
+      "/images/products_images/pastries/paaa.jpg",
+      "/images/products_images/pastries/pas1.jpg"
     ]
   },
   {
     "id": 8,
-    "title": "French Macarons",
-    "desc": "Assorted pastel flavours.",
-    "price": "29.00",
+    "title": "Molten Lava Cake",
+    "desc": "Chocolate explosion in every bite.",
+    "price": "29.00$",
     "category": "cakes",
     "image": [
-      "https://images.pexels.com/photos/302048/pexels-photo-302048.jpeg",
-      "https://images.pexels.com/photos/704569/pexels-photo-704569.jpeg",
-      "https://images.pexels.com/photos/587741/pexels-photo-587741.jpeg"
+      "/images/products_images/cakes/cake5.jpg",
+      "/images/products_images/cakes/molt.jpg",
+      "/images/products_images/cakes/molt2.jpg"
     ]
   },
   {
     "id": 9,
     "title": "Fruit Tart",
     "desc": "Fresh fruit on cream.",
-    "price": "28.00",
+    "price": "28.00$",
     "category": "cakes",
     "image": [
-      "https://images.pexels.com/photos/302789/pexels-photo-302789.jpeg",
-      "https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg",
-      "https://images.pexels.com/photos/214748/pexels-photo-214748.jpeg"
+      "/images/products_images/cakes/fru0.jpg",
+      "/images/products_images/cakes/fru1.jpg",
+      "/images/products_images/cakes/fru2.jpg"
     ]
   },
   {
     "id": 10,
-    "title": "Baguette",
-    "desc": "Classic and crunchy.",
-    "price": "21.00",
+    "title": "Macarons",
+    "desc": "Macaron = colorful happiness.",
+    "price": "21.00$",
     "category": "snacks",
     "image": [
-      "https://images.pexels.com/photos/357469/pexels-photo-357469.jpeg",
-      "https://images.pexels.com/photos/5807060/pexels-photo-5807060.jpeg",
-      "https://images.pexels.com/photos/5807039/pexels-photo-5807039.jpeg"
+      "/images/products_images/snack/mac0.jpg",
+      "/images/products_images/snack/mac1.jpg",
+      "/images/products_images/snack/mac2.jpg"
     ]
   },
   {
     "id": 11,
     "title": "Pancake Stack",
-    "desc": "Fluffy pancakes with syrup.",
-    "price": "20.00",
+    "desc": "Fluffy pancakes with crema.",
+    "price": "20.00$",
     "category": "pastries",
     "image": [
-      "https://images.pexels.com/photos/357573/pexels-photo-357573.jpeg",
-      "https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg",
-      "https://images.pexels.com/photos/8213738/pexels-photo-8213738.jpeg"
+      "/images/products_images/pastries/col1.jpg",
+      "/images/products_images/pastries/col2.jpg",
+      "/images/products_images/pastries/col3.jpg"
     ]
   },
   {
     "id": 12,
-    "title": "Cookie Selection",
-    "desc": "Assorted cookies.",
-    "price": "23.50",
+    "title": "Danish pastries",
+    "desc": "cookie with jam.",
+    "price": "23.50$",
     "category": "cookies",
     "image": [
-      "https://images.pexels.com/photos/302322/pexels-photo-302322.jpeg",
-      "https://images.pexels.com/photos/1893565/pexels-photo-1893565.jpeg",
-      "https://images.pexels.com/photos/890577/pexels-photo-890577.jpeg"
+      "/images/products_images/cookies/12.jpg",
+      "/images/products_images/cookies/13.jpg",
+      "/images/products_images/cookies/124.jpg"
     ]
   },
   {
     "id": 13,
-    "title": "Cookie Selection",
-    "desc": "Assorted cookies.",
-    "price": "23.50",
+    "title": "Cookie Variety",
+    "desc": "vanilla cookies.",
+    "price": "23.50$",
     "category": "cookies",
     "image": [
-      "https://images.pexels.com/photos/302322/pexels-photo-302322.jpeg",
-      "https://images.pexels.com/photos/1893565/pexels-photo-1893565.jpeg",
-      "https://images.pexels.com/photos/890577/pexels-photo-890577.jpeg"
+      "/images/products_images/cookies/cookv1.jpg",
+      "/images/products_images/cookies/cookv2.jpg",
+      "/images/products_images/cookies/cookv3.jpg"
     ]
   }
 ]

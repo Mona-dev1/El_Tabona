@@ -88,7 +88,7 @@ body.dark-theme .form-control,
 body.dark-theme .form-select,
 body.dark-theme textarea {
   background-color: var(--input-bg-dark);
-  color: var(--text-dark); /* النص داخل الحقول */
+  color: var(--text-dark); 
   border: 1px solid var(--border-dark);
 }
 
@@ -99,7 +99,7 @@ body.dark-theme textarea::placeholder {
     247,
     247,
     0.5
-  ); /* Placeholder فاتح عشان يظهر على الخلفية الداكنة */
+  ); 
 }
 
 body.dark-theme .send-button {

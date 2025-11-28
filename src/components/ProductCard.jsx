@@ -4,7 +4,7 @@ export default function ProductCard({ product, onClick }) {
   const images = Array.isArray(product.image) ? product.image : [product.image];
   const [currentImg, setCurrentImg] = useState(images[0]);
   const cardRef = useRef(null);
-
+  console.log(images);
   const handleMouseMove = (e) => {
     if (images.length <= 1) return;
     const rect = cardRef.current.getBoundingClientRect();
@@ -18,7 +18,7 @@ export default function ProductCard({ product, onClick }) {
   return (
     <div
       ref={cardRef}
-      className="card h-100 text-white shadow-sm"
+      className="card h-100 text-white shadow-sm mx-auto"
       onClick={() => onClick(product.id)}
       onMouseMove={handleMouseMove}
       onMouseLeave={resetImage}

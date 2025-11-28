@@ -1,92 +1,247 @@
 import React from "react";
-import "../assets/css/Home.css";
-import { Link } from "react-router-dom";
+import covImage from "../assets/images/cov.jpg";
 
-export default function Home() {
+import { useNavigate } from "react-router-dom";
+
+import "../assets/css/home.css";
+import "../assets/css/global.css";
+
+export default function HeroSection({ addToCart }) {
+  const navigate = useNavigate();
+
   return (
-    <div className="home-page">
-      {/* HERO SECTION */}
-      <section className="hero-section">
-        <div className="hero-overlay"></div>
-        <div className="hero-content">
-          <h1>Freshly Baked Happiness</h1>
-          <p>
-            Discover our handcrafted pastries, cupcakes, and artisan breads made
-            with love every single day.
-          </p>
-          <Link to="/products">
-            <button className="btn-primary">Explore Menu</button>
-          </Link>
-        </div>
+    <>
+      <section
+        className="hero"
+        style={{
+          backgroundImage: `url(${covImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <span className="circle c1"></span>
+        <span className="circle c2"></span>
+        <span className="circle c3"></span>
+        <span className="circle c4"></span>
+
+        <h1>Where Every Bite is a Bloom.</h1>
+        <p>
+          Crafting delightful moments with artisanal baked goods, made with
+          love.
+        </p>
+
+        <button onClick={() => navigate("/products")}>Shop Our Delights</button>
       </section>
 
-      {/* CATEGORY HIGHLIGHTS */}
-      <section className="category-section">
-        <h2 className="section-title">What Are You Craving Today?</h2>
+      <section className="freshly-baked">
+        <h2 className="fresh-title">Today's Freshly Baked</h2>
 
-        <div className="category-grid">
-          <div className="category-card">
-            <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?q=80&w=800" />
-            <div className="category-layer">
-              <h3>Cupcakes</h3>
+        <div className="cards-wrapper">
+          <div className="baked-card">
+            <img src="/images/Pink-Velvet-Cucpakes.jpg" className="baked-img" />
+            <div className="card-body">
+              <h3 className="baked-name">Pink Velvet Cupcakes</h3>
+              <p className="baked-price">$4.50</p>
+              <p className="baked-desc">
+                Our signature velvet cupcakes, topped with smooth strawberry
+              </p>
+              <p className="view-link">View Details</p>
             </div>
           </div>
 
-          <div className="category-card">
-            <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=800" />
-            <div className="category-layer">
-              <h3>Pastries</h3>
+          <div className="baked-card">
+            <img
+              src="/images/Artisan-Sourdough-Bread.jpg"
+              className="baked-img"
+            />
+            <div className="card-body">
+              <h3 className="baked-name">Artisan Sourdough Loaf</h3>
+              <p className="baked-price">$9.99</p>
+              <p className="baked-desc">
+                Hand-kneaded sourdough, baked to perfection with a crispy crust
+              </p>
+              <p className="view-link">View Details</p>
             </div>
           </div>
 
-          <div className="category-card">
-            <img src="https://images.unsplash.com/photo-1509440159598-5fec1f0c6f81?q=80&w=800" />
-            <div className="category-layer">
-              <h3>Artisan Bread</h3>
+          <div className="baked-card">
+            <img
+              src="/images/Chocolate-Croissants-min.jpg"
+              className="baked-img"
+            />
+            <div className="card-body">
+              <h3 className="baked-name">Double Chocolate Croissant</h3>
+              <p className="baked-price">$5.25</p>
+              <p className="baked-desc">
+                Buttery, flaky croissant filled with rich dark chocolate
+              </p>
+              <p className="view-link">View Details</p>
             </div>
           </div>
         </div>
       </section>
+      <section className="signature-section">
+        <h2 className="signature-title">Our Signature Collection</h2>
 
-      {/* FEATURED PRODUCTS */}
-      <section className="featured-section">
-        <h2 className="section-title">Customer Favorites</h2>
+        <div className="signature-cards">
+          <div className="sig-card">
+            <img src="/images/macaron.jpg" className="sig-img" alt="Macarons" />
 
-        <div className="product-grid">
-          {[1, 2, 3, 4].map((i) => (
-            <div className="product-card" key={i}>
-              <img src={`https://picsum.photos/300?random=${i}`} />
-              <h3>Delicious Treat #{i}</h3>
-              <p className="price">$4.99</p>
+            <div className="sig-info">
+              <h3 className="sig-name">Lavender Honey Macarons</h3>
+              <p className="sig-desc">
+                Delicate macarons with a hint of floral sweetness, perfect for
+                any
+              </p>
+
+              <div className="sig-row">
+                <span className="sig-price">$24.00</span>
+                <button
+                  className="sig-btn"
+                  onClick={() =>
+                    addToCart({
+                      id: 1,
+                      name: "Lavender Honey Macarons",
+                      price: 24.0,
+                      qty: 1,
+                      img: "/images/macaron.jpg",
+                    })
+                  }
+                >
+                  Add to Cart
+                </button>
+              </div>
             </div>
-          ))}
+          </div>
+
+          <div className="sig-card">
+            <img
+              src="/images/brownies.jpg"
+              className="sig-img"
+              alt="Brownies"
+            />
+
+            <div className="sig-info">
+              <h3 className="sig-name">Decadent Chocolate Fudge</h3>
+              <p className="sig-desc">
+                Layers of moist chocolate cake and rich fudge frosting, pure
+                indulgence.
+              </p>
+
+              <div className="sig-row">
+                <span className="sig-price">$48.00</span>
+                <button
+                  className="sig-btn"
+                  onClick={() =>
+                    addToCart({
+                      id: 102,
+                      name: "Artisan Sourdough Loaf",
+                      price: 9.99,
+                      qty: 1,
+                      img: "/images/Artisan-Sourdough-Bread.jpg",
+                    })
+                  }
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className="sig-card">
+            <img src="/images/muffin.jpg" className="sig-img" alt="Muffins" />
+
+            <div className="sig-info">
+              <h3 className="sig-name">Classic Blueberry Muffins</h3>
+              <p className="sig-desc">
+                Perfectly baked, light, and fluffy muffins bursting with fresh
+              </p>
+
+              <div className="sig-row">
+                <span className="sig-price">$18.00</span>
+                <button
+                  className="sig-btn"
+                  onClick={() =>
+                    addToCart({
+                      id: 103,
+                      name: "Double Chocolate Croissant",
+                      price: 5.25,
+                      qty: 1,
+                      img: "/images/Chocolate-Croissants-min.jpg",
+                    })
+                  }
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+      <section className="testimonials">
+        <h2 className="title">Hear From Our Happy Customers</h2>
 
-      {/* ABOUT SECTION */}
-      <section className="about-section">
-        <div className="about-grid">
-          <img src="https://images.unsplash.com/photo-1464347744102-11db6282f854?q=80&w=1000" />
-
-          <div className="about-content">
-            <h2>Baked With Passion</h2>
+        <div className="cards">
+          <div className="card">
+            <img
+              src="/images/2.jpg"
+              alt="Customer"
+              className="avatar"
+              class="testimonial-img"
+            />
+            <div className="stars">★★★★★</div>
+            <h4>Alice Chen</h4>
             <p>
-              At Tabona Bakery, every item is freshly prepared using the finest
-              ingredients and traditional baking techniques. Whether you’re in
-              the mood for something sweet, buttery, or savory — we’ve got
-              something special waiting for you.
+              Bake & Bloom never disappoints! Their croissants are heavenly and
+              the customer service is exceptional.
             </p>
-            <button className="btn-dark">Learn More</button>
+          </div>
+
+          <div className="card">
+            <img
+              src="/images/1.jpg"
+              alt="Customer"
+              className="avatar"
+              class="testimonial-img"
+            />
+            <div className="stars">★★★★★</div>
+            <h4>David Nelson</h4>
+            <p>
+              The custom cake for my wife's birthday was a masterpiece.
+              Absolutely delicious and beautifully decorated!
+            </p>
+          </div>
+
+          <div className="card">
+            <img
+              src="/images/3.jpg"
+              alt="Customer"
+              className="avatar"
+              class="testimonial-img"
+            />
+            <div className="stars">★★★★★</div>
+            <h4>Emily Rose</h4>
+            <p>
+              I love their seasonal specialties! Always fresh and innovative.
+              The cookies are my personal favorite.
+            </p>
           </div>
         </div>
       </section>
+      <section className="subscribe">
+        <div className="box">
+          <h2>Join Our Sweet Community</h2>
+          <p>
+            Sign up for our newsletter to receive exclusive offers, new product
+            announcements, and baking tips!
+          </p>
 
-      {/* CTA SECTION */}
-      <section className="cta-section">
-        <h2>Place Your Order Now</h2>
-        <p>Fresh, warm, and delicious — delivered right to your doorstep.</p>
-        <button className="btn-light">Start Ordering</button>
+          <div className="form">
+            <input type="email" placeholder="Enter your email" />
+            <button>Subscribe Now</button>
+          </div>
+        </div>
       </section>
-    </div>
+    </>
   );
 }

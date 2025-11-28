@@ -3,9 +3,9 @@ import productsData from "../data/products.json";
 import FilterBar from "../components/FilterBar";
 import ProductGrid from "../components/ProductGrid";
 import { useNavigate } from "react-router-dom";
-import "../assets/css/products-bs.css"; // CSS بعد التعديلات لـ Bootstrap
+import "../assets/css/products-bs.css"; 
 
-export default function Products() {
+export default function Products({ addToCart }) {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [activeFilter, setActiveFilter] = useState("all");
@@ -23,7 +23,6 @@ export default function Products() {
 
   return (
     <div className="container py-4">
-      {/* Page header */}
       <div className="text-center mb-4 page-title">
         <h2
           className="fw-bold"
@@ -34,7 +33,6 @@ export default function Products() {
         <p className="text-muted">Handpicked treats, baked fresh every day.</p>
       </div>
 
-      {/* Filter Bar */}
       <FilterBar
         categories={categories}
         activeFilter={activeFilter}
@@ -43,7 +41,6 @@ export default function Products() {
         setSort={setSort}
       />
 
-      {/* Product Grid */}
       <ProductGrid
         products={products}
         activeFilter={activeFilter}

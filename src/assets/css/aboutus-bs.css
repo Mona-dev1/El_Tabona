@@ -35,7 +35,6 @@ body.light-theme .card {
   background-color: var(--card-bg-light);
 }
 
-/* Titles */
 .main-title,
 .section-title,
 .card-title,
@@ -44,7 +43,6 @@ body.light-theme .card {
   color: var(--primary-color);
 }
 
-/* Timeline */
 .story-timeline {
   position: relative;
   max-width: 1000px;
@@ -70,7 +68,6 @@ body.light-theme .timeline-line {
   border-radius: 6px;
 }
 
-/* Values & Team Icons */
 .value-card i {
   color: var(--primary-color);
 }
@@ -81,7 +78,6 @@ body.light-theme .timeline-line {
   border: 3px solid var(--primary-color);
 }
 
-/* Theme toggle button */
 .theme-toggle-button {
   position: fixed;
   top: 155px;
@@ -101,7 +97,6 @@ body.light-theme .theme-toggle-button {
   color: var(--text-light);
 }
 
-/* Responsive fixes */
 @media (max-width: 768px) {
   .timeline-line {
     left: 20px;

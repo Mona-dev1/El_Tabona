@@ -22,7 +22,6 @@ body {
   padding: 28px 0 80px;
 }
 
-/* PRODUCT TOP */
 .product-top {
   display: flex;
   gap: 40px;
@@ -30,7 +29,6 @@ body {
   margin-top: 10px;
 }
 
-/* gallery box (matches provided image) */
 .product-gallery {
   background: #0e0e0f;
   padding: 18px;
@@ -166,7 +164,6 @@ body {
   cursor: pointer;
 }
 
-/* Accordion placeholders (like image) */
 .accordion {
   background: #0f0f10;
   border-radius: 8px;
@@ -174,7 +171,6 @@ body {
   margin-bottom: 12px;
 }
 
-/* sections */
 .section-title {
   font-family: Pacifico, cursive;
   text-align: center;
@@ -212,8 +208,6 @@ body {
 .card strong {
   color: var(--accent);
 }
-
-/* responsive */
 @media (max-width: 980px) {
   .product-top {
     flex-direction: column;

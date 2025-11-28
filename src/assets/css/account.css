@@ -1,0 +1,100 @@
+.account-container {
+  width: 100%;
+  min-height: 100vh;
+  background: #000; 
+  color: #333;
+  padding: 40px 20px;
+  font-family: sans-serif;
+}
+
+.account-box {
+  max-width: 800px;
+  margin: auto;
+  background: #1c1c1c; 
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+.profile-content {
+  display: flex;
+  gap: 40px;
+}
+
+.avatar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  object-fit: cover;
+}
+
+.avatar-btn {
+  margin-top: 15px;
+  padding: 8px 15px;
+  background: transparent;
+  border: 1px solid #ccc;
+  color: #555;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.inputs {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  opacity: 0.8;
+}
+
+.inputs input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #f8f8f8;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.btns {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.back-btn {
+  padding: 12px 20px;
+  background: #eee;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #333;
+}
+
+.save-btn {
+  padding: 12px 20px;
+  background: rgb(146, 77, 17); 
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+}

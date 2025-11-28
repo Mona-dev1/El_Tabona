@@ -4,13 +4,11 @@ export default function Footer() {
       className="py-3 px-4 d-flex justify-content-between align-items-center"
       style={{ backgroundColor: "#031c1f", color: "#fff" }}
     >
-      {/* LEFT TEXT */}
       <div className="footer-left">
         <span>© BakeDelight</span>
         <span> | Made with ❤️</span>
       </div>
 
-      {/* ICONS */}
       <div className="d-flex gap-3 align-items-center icons">
         <a href="https://facebook.com" className="text-white fs-5">
           <i className="fa-brands fa-facebook-f"></i>

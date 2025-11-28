@@ -1,51 +1,64 @@
+:root {
+  --bg-main: #ffffff;
+  --card-bg: #f8f9fa;
+  --text-color: #000000;
+  --text-secondary: #666666;
+  --primary-color: #855e42;
+  --timeline-line: #dee2e6;
+}
+
+.light-theme {
+  --bg-main: #ffffff;
+  --card-bg: #f8f9fa;
+  --text-color: #000000;
+  --text-secondary: #666666;
+  --primary-color: #855e42;
+  --timeline-line: #dee2e6;
+}
+
+.dark-theme {
+  --bg-main: #121212;
+  --card-bg: #1e1e1e;
+  --text-color: #ffffff;
+  --text-secondary: #b0b0b0;
+  --primary-color: #c5a17f;
+  --timeline-line: #444;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.dark-theme {
-  --bg-main: #121212;
-  --card-bg: #1f1f1f;
-  --text-color: #f7f7f7;
-  --text-secondary: #ccc;
-  --primary-color: #c5a17f;
-  --timeline-line: #333;
-}
 
-.light-theme {
-  --bg-main: #f0f0f0;
-  --card-bg: #ffffff;
-  --text-color: #121212;
-  --text-secondary: #555;
-  --primary-color: #855e42;
-  --timeline-line: #ccc;
-}
-
-body.light-theme,
-body.dark-theme {
+body {
   background-color: var(--bg-main);
-  transition: background-color 0.3s;
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  font-family: "Poppins", sans-serif;
 }
+
 .about-us-container {
   background-color: var(--bg-main);
   color: var(--text-color);
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
   transition: background-color 0.3s, color 0.3s;
-  /* max-width: 1200px; */
-  /* margin: 30px 300px; */
-  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-
-  /* background-color: red; */
+  padding: 2rem 0;
 }
 
 .card {
   background-color: var(--card-bg);
+  color: var(--text-color);
   border-radius: 12px;
   padding: 30px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s, box-shadow 0.3s;
+  border: 1px solid var(--timeline-line);
 }
 
 .main-title,
@@ -83,8 +96,6 @@ body.dark-theme {
   color: var(--primary-color);
   margin-bottom: 50px;
 }
-
-/*  (Timeline)  */
 
 .story-timeline {
   position: relative;
@@ -125,6 +136,8 @@ body.dark-theme {
   position: relative;
   border-radius: 8px;
   padding: 20px;
+  background-color: var(--card-bg);
+  color: var(--text-color);
 }
 
 .timeline-item::after {
@@ -156,11 +169,11 @@ body.dark-theme {
 }
 
 .timeline-content .year {
-  color: var(--primary-color);
   font-weight: 600;
   font-size: 14px;
   display: block;
   margin-bottom: 5px;
+  color: var(--primary-color);
 }
 
 .timeline-image {
@@ -171,23 +184,14 @@ body.dark-theme {
   margin-top: 15px;
 }
 
-/*   (Values) */
 .values-section {
   padding-top: 50px;
 }
 
-.values-grid {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center;
-}
-
 .value-card {
-  flex: 1;
-  min-width: 250px;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--timeline-line);
 }
 
 .value-card .fas {
@@ -196,23 +200,14 @@ body.dark-theme {
   margin-bottom: 10px;
 }
 
-/*  (Team) */
 .team-section {
   padding-bottom: 50px;
 }
 
-.team-grid {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center;
-}
-
 .team-member {
-  flex: 1;
-  min-width: 200px;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--timeline-line);
 }
 
 .team-photo {
@@ -226,6 +221,7 @@ body.dark-theme {
 
 .member-name {
   font-size: 20px;
+  color: var(--primary-color);
 }
 
 .member-role {
@@ -238,58 +234,6 @@ body.dark-theme {
   font-size: 14px;
   color: var(--text-secondary);
 }
-
-/*  Footer */
-
-.site-footer {
-  padding: 30px 0;
-  margin-top: 50px;
-  border-top: 1px solid var(--timeline-line);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.footer-links a {
-  color: var(--text-secondary);
-  text-decoration: none;
-  margin-right: 20px;
-  font-size: 14px;
-}
-
-.footer-social .fab {
-  font-size: 18px;
-  color: var(--text-secondary);
-  margin-left: 15px;
-  cursor: pointer;
-  transition: color 0.2s;
-}
-
-.footer-social .fab:hover {
-  color: var(--primary-color);
-}
-
-/* ======================= تنسيق زر التبديل ======================= */
-.theme-toggle-button {
-  position: fixed;
-  top: 155px;
-  right: 20px;
-  z-index: 9999;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-weight: bold;
-  background-color: var(--card-bg);
-  color: var(--text-color);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
-  transition: background-color 0.3s, color 0.3s;
-}
-
-/* ======================= Media Queries (للاستجابة) ======================= */
 
 @media (max-width: 1024px) {
   .values-grid,
@@ -334,6 +278,7 @@ body.dark-theme {
     flex-direction: column;
     gap: 20px;
   }
+  
   .value-card,
   .team-member {
     width: 100%;
@@ -341,17 +286,15 @@ body.dark-theme {
     margin: 0 auto;
   }
 
-  .site-footer {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-links {
-    margin-bottom: 15px;
-  }
-  /* تعديلات على حاوية الصفحة على الجوال */
   .about-us-container {
-    max-width: 100%; /* السماح له بالامتداد على الشاشة الصغيرة */
-    padding: 80px 10px;
+    padding: 20px 10px;
+  }
+  
+  .main-title {
+    font-size: 36px;
+  }
+  
+  .section-title {
+    font-size: 32px;
   }
 }

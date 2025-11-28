@@ -1,22 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "../assets/css/aboutus-bs.css";
 
 const AboutUs = () => {
-  const [theme, setTheme] = useState("dark");
-  const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
-
-  useEffect(() => {
-    document.body.className = `${theme}-theme`;
-  }, [theme]);
-
   return (
-    <div className={`about-us-container py-5 ${theme}-theme`}>
-      {/* Theme Toggle */}
-      <button className="btn theme-toggle-button" onClick={toggleTheme}>
-        {theme === "light" ? "🌙 Dark Mode" : "☀️ Light Mode"}
-      </button>
-
-      {/* Our Story */}
+    <div className="about-us-container py-5">
       <section className="text-center mb-5 container">
         <h1 className="main-title mb-3">Our Story, Baked with Love</h1>
         <p className="main-description mb-3">
@@ -30,7 +17,6 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Timeline */}
       <section className="story-timeline position-relative mb-5 container">
         <div className="timeline-line position-absolute"></div>
 
@@ -79,9 +65,9 @@ const AboutUs = () => {
           >
             <div className="col-md-6">
               <div className="card timeline-content p-3">
-                <span className="year text-warning fw-bold">{item.year}</span>
+                <span className="year fw-bold">{item.year}</span>
                 <h3 className="card-title">{item.title}</h3>
-                <p className="text-white">{item.text}</p>
+                <p>{item.text}</p>
                 <img
                   src={item.img}
                   alt={item.title}
@@ -93,7 +79,6 @@ const AboutUs = () => {
         ))}
       </section>
 
-      {/* Values Section */}
       <section className="values-section text-center mb-5 container">
         <h2 className="section-title mb-4">Our Values</h2>
         <div className="row justify-content-center g-4">
@@ -115,15 +100,14 @@ const AboutUs = () => {
             },
           ].map((val, i) => (
             <div key={i} className="col-md-4 value-card card p-3 mx-2">
-              <i className={`${val.icon} mb-2 display-6 text-warning`}></i>
+              <i className={`${val.icon} mb-2 display-6`}></i>
               <h4 className="card-title">{val.title}</h4>
-              <p className="text-white">{val.text}</p>
+              <p>{val.text}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Team Section */}
       <section className="team-section text-center mb-5 container">
         <h2 className="section-title mb-4">Meet The Team</h2>
         <div className="row justify-content-center g-4">
@@ -157,8 +141,8 @@ const AboutUs = () => {
                 className="team-photo rounded-circle mb-2"
               />
               <h4 className="member-name">{member.name}</h4>
-              <p className="member-role text-white">{member.role}</p>
-              <p className="member-bio text-white">{member.bio}</p>
+              <p className="member-role">{member.role}</p>
+              <p className="member-bio">{member.bio}</p>
             </div>
           ))}
         </div>

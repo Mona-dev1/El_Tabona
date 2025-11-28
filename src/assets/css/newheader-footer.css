@@ -6,9 +6,8 @@ header .container {
   padding: 0;
 }
 
-/* footer.css */
 
-/* Hover effect */
+
 .icons a {
   transition: transform 0.3s, color 0.3s;
 }
@@ -18,7 +17,6 @@ header .container {
   transform: scale(1.2);
 }
 
-/* Responsive behavior same as original */
 @media (max-width: 600px) {
   footer {
     flex-direction: column !important;

@@ -1,0 +1,352 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 100px 20px;
+  background: url('/images/cov.jpg') center/cover no-repeat;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(1px); 
+  background-color: rgba(0, 0, 0, 0.2); 
+  z-index: 0;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+  color: #fff; 
+}
+
+.hero .circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.c1 { width: 12px; height: 12px; background: #8b6b2f; top: 80px; left: 130px; }
+.c2 { width: 12px; height: 12px; background: #355e3b; top: 150px; right: 90px; }
+.c3 { width: 8px; height: 8px; background: #555; top: 50%; left: 33%; }
+.c4 { width: 12px; height: 12px; background: #7a3b00; bottom: 120px; right: 200px; }
+
+.hero h1 {
+  font-size: 55px;
+  text-align: center;
+  margin-bottom: 15px;
+  font-family: cursive;
+}
+
+.hero p {
+  font-size: 20px;
+  text-align: center;
+  font-style: italic;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.hero button {
+  background: #8a4b14;
+  color: white;
+  padding: 12px 35px;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  background: #6d380d;
+}
+
+.freshly-baked {
+  background: #1d2024;
+  padding: 60px 0;
+  text-align: center;
+  color: white;
+}
+
+.fresh-title {
+  font-family: "Dancing Script", cursive;
+  font-size: 42px;
+  margin-bottom: 40px;
+}
+
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
+ 
+}
+
+.baked-card {
+  width: 260px;
+  background-color: #2b1a11;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative; 
+}
+
+
+.baked-card:hover {
+  transform: translateY(-8px);
+}
+
+.baked-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+  padding-bottom: 40px; 
+}
+
+
+
+
+.baked-name {
+  font-family: "Dancing Script", cursive;
+  font-size: 20px;
+}
+
+.baked-price {
+  font-size: 14px;
+  margin: 4px 0 10px;
+}
+
+.baked-desc {
+  font-size: 13px;
+  opacity: 0.85;
+  margin-bottom: 15px;
+}
+
+.view-link {
+  color: #b6cc66;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+  position: absolute;
+  bottom: 12px; 
+  left: 50%;
+  transform: translateX(-50%); 
+}
+
+
+.view-link:hover {
+  color: #d7e88a;
+}
+
+.signature-section {
+  background: #000;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.signature-title {
+  font-family: "Dancing Script", cursive;
+  font-size: 42px;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.signature-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.sig-card {
+  width: 320px;
+  background: #1d1d1d;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.sig-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.sig-info {
+  padding: 18px;
+  color: white;
+  text-align: left;
+}
+
+.sig-name {
+  font-family: "Dancing Script", cursive;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.sig-desc {
+  opacity: 0.85;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.sig-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sig-price {
+  font-size: 15px;
+  color: #e0a34b;
+}
+
+.sig-btn {
+  background: #c97e3d;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.sig-btn:hover {
+  background: #a8682f;
+}
+.testimonials {
+  padding: 60px 20px;
+  background: #1d2024;
+  text-align: center;
+  color: white;
+}
+
+.title {
+  font-size: 32px;
+  font-family: "Georgia", cursive;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #1f2530;
+  padding: 25px;
+  border-radius: 12px;
+  width: 260px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.stars {
+  color: #ffb400;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.subscribe {
+  padding: 70px 20px;
+  background: #1d2024;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  background: #1f2530;
+  padding: 40px 30px;
+  border-radius: 15px;
+  width: 600px;
+  text-align: center;
+}
+
+.box h2 {
+  font-size: 28px;
+  font-family: "Georgia", cursive;
+  margin-bottom: 15px;
+}
+
+.box p {
+  font-size: 15px;
+  margin-bottom: 25px;
+  color: #ccc;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.form input {
+  padding: 10px;
+  width: 250px;
+  border-radius: 4px;
+  border: none;
+}
+
+.form button {
+  padding: 10px 20px;
+  background: #f7a23b;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.testimonial-img {
+  width: 100px;          
+  height: 100px;
+  border-radius: 50%;    
+  object-fit: cover;     
+  object-position: center;
+  overflow: hidden;
+  display: block;
+  margin: 0 auto;       
+}

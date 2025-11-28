@@ -12,24 +12,32 @@
 * {
   box-sizing: border-box;
 }
+.light-theme {
+  --header-bg: #924d11; 
+  --header-text: #ffffff; 
+  --header-hover: #f7d6b3; 
+}
 
+.dark-theme {
+  --header-bg: #4f2a09; 
+  --header-text: #f0f0f0; 
+  --header-hover: #c5a17f; 
+}
 #header {
   background-color: #924d11ff;
   font-family: "Allura", cursive;
   color: #fff;
 }
 
-/* FULL WIDTH NAV */
 .brown-nav {
   width: 100%;
-  background-color: #924d11ff; /* اللون اللي طلبتيه */
+  background-color: #924d11ff; 
   padding: 12px;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-/* container */
 .brown-nav-container {
   width: 100%;
   margin: auto;
@@ -39,7 +47,6 @@
   align-items: center;
 }
 
-/* LEFT LOGO */
 .brown-logo {
   display: flex;
   align-items: center;
@@ -58,7 +65,6 @@
   font-size: 30px;
 }
 
-/* CENTER LINKS */
 .brown-links {
   display: flex;
   gap: 35px;
@@ -69,6 +75,8 @@
   opacity: 1;
 }
 
+
+
 .brown-links a {
   color: #fff;
   text-decoration: none;
@@ -77,11 +85,11 @@
   font-family: "Poppins", sans-serif;
 }
 
+
 .brown-links a:hover {
   color: #f7d6b3;
 }
 
-/* RIGHT ICONS */
 .brown-icons {
   display: flex;
   gap: 20px;
@@ -97,14 +105,13 @@
 .brown-icons i:hover {
   color: #f7d6b3;
 }
-/*footer*/
 #footer {
   padding: 20px 40px;
   background-color: #031c1f;
   color: #ffffff;
   display: flex;
-  justify-content: space-between; /* النصوص على الشمال والأيقونات على اليمين */
-  align-items: center; /* مهم جدًا عشان يبقى كل شيء في منتصف السطر */
+  justify-content: space-between; 
+  align-items: center; 
   font-family: Arial, sans-serif;
   font-size: 14px;
 }
@@ -141,3 +148,167 @@
     gap: 10px;
   }
 }
+:root {
+  --bg: #0f0f10;
+  --card: #121214;
+  --muted: #bdbcbc;
+  --accent: rgb(167, 88, 18);
+  --glass: rgba(255, 255, 255, 0.03);
+  --radius: 14px;
+  --gap: 24px;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.light-theme {
+  --header-bg: #924d11;
+  --header-text: #ffffff;
+  --header-hover: #f7d6b3;
+}
+
+.dark-theme {
+  --header-bg: #4f2a09;
+  --header-text: #f0f0f0;
+  --header-hover: #c5a17f;
+}
+
+#header {
+  background-color: #924d11ff;
+  font-family: "Allura", cursive;
+  color: #fff;
+}
+
+.brown-nav {
+  width: 100%;
+  background-color: var(--header-bg, #924d11ff);
+  padding: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.brown-nav-container {
+  width: 100%;
+  margin: auto;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brown-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brown-logo img {
+  width: 65px;
+  height: 65px;
+}
+
+.brown-logo h1 {
+  color: #fff;
+  font-family: allura;
+  font-size: 30px;
+}
+
+.brown-links {
+  display: flex;
+  gap: 35px;
+  font-family: DM Sans;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  opacity: 1;
+}
+
+.brown-links a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+.brown-links a:hover,
+.theme-text-header:hover {
+  color: var(--header-hover) !important;
+}
+
+.brown-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.brown-icons i {
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.brown-icons i:hover {
+  color: var(--header-hover);
+}
+
+.theme-toggle-button {
+  background: none;
+  border: none;
+  padding: 0;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.theme-toggle-button i {
+  font-size: 22px;
+  line-height: 1;
+}
+
+footer/ #footer {
+  padding: 20px 40px;
+  background-color: #031c1f;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+#footer .footer-left {
+  line-height: 1;
+  justify-content: left;
+}
+
+#footer .icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: right;
+}
+
+#footer .icons a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1;
+  transition: transform 0.3s, color 0.3s;
+}
+
+#footer .icons a:hover {
+  color: #f39c12;
+  transform: scale(1.2);
+}
+
+@media (max-width: 600px) {
+  #footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
+

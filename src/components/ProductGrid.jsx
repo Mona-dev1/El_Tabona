@@ -17,9 +17,9 @@ export default function ProductGrid({
   if (sort === "newest") filtered = filtered.reverse();
 
   return (
-    <div className="row g-3">
+    <div className="row g-3 justify-content-center align-items-center">
       {filtered.map((p) => (
-        <div key={p.id} className="col-6 col-sm-6 col-md-4 col-lg-3">
+        <div key={p.id} className="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
           <ProductCard product={p} onClick={onProductClick} />
         </div>
       ))}
