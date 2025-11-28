@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -43,14 +42,17 @@ export default function App() {
   }
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/El_Tabona">
       <Header />
 
       <Routes>
         <Route path="/" element={<Home addToCart={addToCart} />} />
         <Route path="/login-signup" element={<LoginSignup />} />
         <Route path="/products" element={<Products addToCart={addToCart} />} />
-        <Route path="/product/:id" element={<Product addToCart={addToCart} />} />
+        <Route
+          path="/product/:id"
+          element={<Product addToCart={addToCart} />}
+        />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/about" element={<AboutUs />} />
         <Route

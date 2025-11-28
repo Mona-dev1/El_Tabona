@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://username.github.io/repo-name",
+  "homepage": "https://mona-dev1.github.io/El_Tabona",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
