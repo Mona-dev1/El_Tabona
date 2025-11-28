@@ -24,9 +24,10 @@
   --primary-color: #c5a17f;
   --timeline-line: #444;
 }
+
 body {
   margin: 0;
-  background: #000;
+  background: var(--bg-main);
   font-family: Arial, sans-serif;
   color: white;
 }
@@ -133,7 +134,7 @@ body {
   display: flex;
   gap: 8px;
   align-items: center;
- margin-left:auto;
+  margin-left: auto;
 }
 
 .qty-box button {
@@ -258,13 +259,26 @@ input {
   justify-content: space-between;
   margin: 6px 0;
 }
+
 .order-message {
-  background-color: #4f2a09;
+  background-color: #3a2a18;
   color: white;
   padding: 20px;
   text-align: center;
   margin-top: 20px;
   border-radius: 10px;
+}
+
+.error-msg {
+  color: #ffffff;
+  background-color: #3a2a18;
+
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 15px;
+  text-align: center;
 }
 
 @media (max-width: 992px) {

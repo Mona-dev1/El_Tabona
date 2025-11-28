@@ -1,6 +1,7 @@
 .ls-page {
   min-height: 100vh;
   background-color: var(--body-bg, #f7f2ec);
+  background-color:#000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,10 +13,11 @@
   display: flex;
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
   max-width: 900px;
   width: 100%;
 }
+
 .ls-img-box {
   flex: 1;
   background-color: var(--header-bg, #4e2b0c);
@@ -114,6 +116,7 @@ input:focus {
 
 .link-like {
   background: none;
+
   border: none;
   color: var(--header-bg, #4e2b0c);
   cursor: pointer;
@@ -138,8 +141,8 @@ input:focus {
 .ls-img-box img {
   width: 100%;
   height: 100%;
-  object-fit: cover;   
-  border-radius: 0;    
+  object-fit: cover; 
+  border-radius: 0; 
   display: block;
 }
 .ls-switch {
@@ -149,8 +152,8 @@ input:focus {
 }
 
 .ls-switch button {
-  flex: 1;                 
-  padding: 14px 0;        
+  flex: 1; 
+  padding: 14px 0;
   border-radius: 10px 10px 10px 10px;
   border: none;
   background: #e9dcc7;
@@ -160,7 +163,7 @@ input:focus {
 }
 
 .ls-switch button.active {
-  background: #8a4b14;      
+  background: #8a4b14; 
   color: #fff;
 }
 

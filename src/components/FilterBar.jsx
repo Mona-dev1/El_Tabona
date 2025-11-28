@@ -8,7 +8,6 @@ export default function FilterBar({
   return (
     <div className="filters-box p-3 mb-4 rounded shadow-sm">
       <div className="d-flex flex-wrap justify-content-between align-items-center gap-3">
-        
         <div className="btn-group flex-wrap" role="group">
           <button
             className={`btn category-btn rounded-pill ${

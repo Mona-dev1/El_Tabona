@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import  { useEffect } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   ShoppingCart,
@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import "../assets/css/Cart.css";
 
-export default function Cart({ cart, setCart, removeFromCart,updateQty }) {
+export default function Cart({ cart, setCart, removeFromCart, updateQty }) {
   const [orderPlaced, setOrderPlaced] = useState(false);
 
   const [step, setStep] = useState(0);
@@ -23,7 +23,7 @@ export default function Cart({ cart, setCart, removeFromCart,updateQty }) {
     }
   }, []);
 
-
+  const [errorMsg, setErrorMsg] = useState("");
   const [ship, setShip] = useState({
     name: "",
     phone: "",
@@ -46,10 +46,8 @@ export default function Cart({ cart, setCart, removeFromCart,updateQty }) {
   const tax = subtotal * 0.06;
   const total = subtotal + shipCost + tax;
 
-
   return (
-   
-    <div className="wrapper-black">
+    <div className="wrapper-black min-vh-100 ">
       <h1 className="title-center">Your Sweet Cart</h1>
 
       <div className="steps-bar">
@@ -97,7 +95,7 @@ export default function Cart({ cart, setCart, removeFromCart,updateQty }) {
 
                   <button
                     className="remove-btn"
-                    onClick={() =>  removeFromCart(item.id)}
+                    onClick={() => removeFromCart(item.id)}
                   >
                     <X size={18} />
                   </button>
@@ -178,30 +176,28 @@ export default function Cart({ cart, setCart, removeFromCart,updateQty }) {
             <div>
               <h2>Payment Info</h2>
               <input
-  placeholder="Card Number"
-  value={_pay.cardNum}
-  onChange={(e) => _setPay({ ..._pay, cardNum: e.target.value })}
-/>
-<input
-  placeholder="Name on Card"
-  value={_pay.name}
-  onChange={(e) => _setPay({ ..._pay, name: e.target.value })}
-/>
-<div className="grid2">
-  <input
-    placeholder="MM/YY"
-    value={_pay.exp}
-    onChange={(e) => _setPay({ ..._pay, exp: e.target.value })}
-  />
-  <input
-    placeholder="CVV"
-    value={_pay.cvv}
-    onChange={(e) => _setPay({ ..._pay, cvv: e.target.value })}
-  />
-</div>
-
+                placeholder="Card Number"
+                value={_pay.cardNum}
+                onChange={(e) => _setPay({ ..._pay, cardNum: e.target.value })}
+              />
+              <input
+                placeholder="Name on Card"
+                value={_pay.name}
+                onChange={(e) => _setPay({ ..._pay, name: e.target.value })}
+              />
+              <div className="grid2">
+                <input
+                  placeholder="MM/YY"
+                  value={_pay.exp}
+                  onChange={(e) => _setPay({ ..._pay, exp: e.target.value })}
+                />
+                <input
+                  placeholder="CVV"
+                  value={_pay.cvv}
+                  onChange={(e) => _setPay({ ..._pay, cvv: e.target.value })}
+                />
               </div>
-            
+            </div>
           )}
 
           {step === 3 && (
@@ -233,34 +229,42 @@ export default function Cart({ cart, setCart, removeFromCart,updateQty }) {
                 Back
               </button>
             )}
-  <button
-  className="next-btn"
-  onClick={() => {
-    if (step === 1) {
-      const { name, phone, street, city, state, zip } = ship;
-      if (!name || !phone || !street || !city || !state || !zip) {
-        alert("Please fill in all shipping details.");
-        return; 
-      }
-    }
-    if (step === 2) {
-      const { cardNum, name, exp, cvv } = _pay;
-      if (!cardNum || !name || !exp || !cvv) {
-        alert("Please fill in all payment details.");
-        return;
-      }
-    }
-    if (step === 3) {
-      setOrderPlaced(true);
-      return; 
-    }
-    setStep(step + 1);
-  }}
->
-  {step === 3 ? "Place Order" : "Continue"}
-</button>
+            
+            <button
+              className="next-btn"
+              onClick={() => {
+                setErrorMsg("");
 
+                if (cart.length === 0) {
+                  setErrorMsg("Your cart is empty!");
+                  return;
+                }
 
+                if (step === 1) {
+                  const { name, phone, street, city, state, zip } = ship;
+                  if (!name || !phone || !street || !city || !state || !zip) {
+                    setErrorMsg("Please fill in all shipping details.");
+                    return;
+                  }
+                }
+
+                if (step === 2) {
+                  const { cardNum, name, exp, cvv } = _pay;
+                  if (!cardNum || !name || !exp || !cvv) {
+                    setErrorMsg("Please fill in all payment details.");
+                    return;
+                  }
+                }
+                if (step === 3) {
+                  setOrderPlaced(true);
+                  return;
+                }
+
+                setStep(step + 1);
+              }}
+            >
+              {step === 3 ? "Place Order" : "Continue"}
+            </button>
           </div>
         </div>
 
@@ -298,12 +302,15 @@ export default function Cart({ cart, setCart, removeFromCart,updateQty }) {
           <h2>Total: ${total.toFixed(2)}</h2>
         </div>
       </div>
+
+      {errorMsg && <p className="error-msg">{errorMsg}</p>}
+
       {orderPlaced && (
-  <div className="order-message">
-    <h2>🎉 Your order has been placed successfully!</h2>
-    <p>Thank you for shopping with us.</p>
-  </div>
-)}
+        <div className="order-message">
+          <h2>🎉 Your order has been placed successfully!</h2>
+          <p>Thank you for shopping with us.</p>
+        </div>
+      )}
     </div>
   );
 }

@@ -142,10 +142,10 @@ export default function HeroSection({ addToCart }) {
                   onClick={() =>
                     addToCart({
                       id: 102,
-                      name: "Artisan Sourdough Loaf",
+                      name: "Decadent Chocolate Fudge",
                       price: 9.99,
                       qty: 1,
-                      img: "/El_Tabona/images/Artisan-Sourdough-Bread.jpg",
+                      img: "/El_Tabona/images/brownies.jpg",
                     })
                   }
                 >
@@ -175,10 +175,10 @@ export default function HeroSection({ addToCart }) {
                   onClick={() =>
                     addToCart({
                       id: 103,
-                      name: "Double Chocolate Croissant",
+                      name: "Classic Blueberry Muffins",
                       price: 5.25,
                       qty: 1,
-                      img: "/El_Tabona/images/Chocolate-Croissants-min.jpg",
+                      img: "/El_Tabona/images/muffin.jpg",
                     })
                   }
                 >

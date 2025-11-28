@@ -5,6 +5,8 @@
   --text-secondary: #666666;
   --primary-color: #855e42;
   --timeline-line: #dee2e6;
+  --border-color: #cccccc;
+  --input-bg: #ffffff;
 }
 
 .light-theme {
@@ -14,6 +16,8 @@
   --text-secondary: #666666;
   --primary-color: #855e42;
   --timeline-line: #dee2e6;
+  --border-color: #cccccc;
+  --input-bg: #ffffff;
 }
 
 .dark-theme {
@@ -23,6 +27,8 @@
   --text-secondary: #b0b0b0;
   --primary-color: #c5a17f;
   --timeline-line: #444;
+  --border-color: #555555;
+  --input-bg: #333333;
 }
 
 * {
@@ -36,6 +42,20 @@ body {
   color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
   font-family: "Poppins", sans-serif;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s, background-color 0.3s;
 }
 
 .about-us-container {
@@ -112,24 +132,26 @@ body {
   top: 0;
   bottom: 0;
   left: 50%;
-  margin-left: -1px;
+  transform: translateX(-50%);
 }
 
 .timeline-item {
-  padding: 10px 40px;
   position: relative;
   width: 50%;
+  padding: 10px 40px;
   box-sizing: border-box;
 }
 
 .timeline-item.left {
   left: 0;
   padding-right: 60px;
+  text-align: right;
 }
 
 .timeline-item.right {
   left: 50%;
   padding-left: 60px;
+  text-align: left;
 }
 
 .timeline-content {
@@ -138,6 +160,7 @@ body {
   padding: 20px;
   background-color: var(--card-bg);
   color: var(--text-color);
+  border: 1px solid var(--timeline-line);
 }
 
 .timeline-item::after {
@@ -153,19 +176,11 @@ body {
 }
 
 .timeline-item.right::after {
-  left: -8px;
+  left: 42px;
 }
 
 .timeline-item.left::after {
-  right: -8px;
-}
-
-.timeline-item.left {
-  text-align: right;
-}
-
-.timeline-item.left .timeline-content {
-  text-align: right;
+  right: 42px;
 }
 
 .timeline-content .year {
@@ -188,10 +203,19 @@ body {
   padding-top: 50px;
 }
 
+.values-grid,
+.team-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 0 20px;
+  margin: 30px auto;
+  max-width: 1200px;
+}
+
 .value-card {
-  background-color: var(--card-bg);
-  color: var(--text-color);
-  border: 1px solid var(--timeline-line);
+  text-align: center;
+  flex-basis: 30%;
 }
 
 .value-card .fas {
@@ -205,9 +229,11 @@ body {
 }
 
 .team-member {
-  background-color: var(--card-bg);
-  color: var(--text-color);
-  border: 1px solid var(--timeline-line);
+  flex-basis: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .team-photo {
@@ -236,10 +262,13 @@ body {
 }
 
 @media (max-width: 1024px) {
+
   .values-grid,
   .team-grid {
     flex-wrap: wrap;
+    gap: 20px;
   }
+
   .value-card,
   .team-member {
     flex-basis: 45%;
@@ -247,6 +276,7 @@ body {
 }
 
 @media (max-width: 768px) {
+
   .story-timeline::after {
     left: 20px;
   }
@@ -278,7 +308,7 @@ body {
     flex-direction: column;
     gap: 20px;
   }
-  
+
   .value-card,
   .team-member {
     width: 100%;
@@ -289,12 +319,53 @@ body {
   .about-us-container {
     padding: 20px 10px;
   }
-  
+
   .main-title {
     font-size: 36px;
   }
-  
+
   .section-title {
     font-size: 32px;
+  }
+}
+.value-card i {
+  color: var(--primary-color);
+}
+.team-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+}
+
+.theme-toggle-button {
+  position: fixed;
+  top: 155px;
+  right: 20px;
+  z-index: 9999;
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-weight: bold;
+  background-color: var(--card-bg-dark);
+  color: var(--text-dark);
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  transition: 0.3s;
+}
+body.light-theme .theme-toggle-button {
+  background-color: var(--card-bg-light);
+  color: var(--text-light);
+}
+
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 20px;
+  }
+  .timeline-item {
+    width: 100% !important;
+    text-align: left !important;
+  }
+  .timeline-item .timeline-content {
+    margin-left: 40px !important;
   }
 }

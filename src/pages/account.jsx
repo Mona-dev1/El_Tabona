@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import "../assets/css/account.css";
 import { FaUserCircle } from "react-icons/fa";
@@ -59,11 +60,7 @@ export default function Account() {
 
           <div className="inputs">
             <label>Name</label>
-            <input
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
+            <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
 
             <label>Email Address</label>
             <input type="email" value={email} readOnly />

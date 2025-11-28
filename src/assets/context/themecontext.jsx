@@ -18,7 +18,8 @@ export const ThemeProvider = ({ children }) => {
 
   const value = {
     theme,
-    toggleTheme,
+    toggleTheme, 
+    
   };
 
   return (

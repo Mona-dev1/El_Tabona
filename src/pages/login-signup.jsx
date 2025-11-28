@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import "../assets/css/login-signup.css";
 import { useNavigate } from "react-router-dom";
@@ -13,6 +14,7 @@ export default function LoginSignup() {
     setForm({ ...form, [e.target.name]: e.target.value });
     setErrors({ ...errors, [e.target.name]: "" });
   };
+
 
   const validate = () => {
     const err = {};
@@ -38,11 +40,8 @@ export default function LoginSignup() {
       password: "batol17",
     };
 
-    if (
-      form.email === dummyUser.email &&
-      form.password === dummyUser.password
-    ) {
-      sessionStorage.setItem("userLoggedIn", "true");
+    if (form.email === dummyUser.email && form.password === dummyUser.password) {
+       sessionStorage.setItem("userLoggedIn", "true"); 
       sessionStorage.setItem("userEmail", form.email);
       sessionStorage.setItem("userName", "Batol Mohamed");
       navigate("/account");
@@ -74,9 +73,7 @@ export default function LoginSignup() {
             </button>
           </div>
 
-          <h2 className="ls-title">
-            {mode === "login" ? "Welcome Back" : "Join Us"}
-          </h2>
+          <h2 className="ls-title">{mode === "login" ? "Welcome Back" : "Join Us"}</h2>
 
           <form className="ls-form" onSubmit={handleSubmit}>
             {mode === "signup" && (
@@ -89,26 +86,14 @@ export default function LoginSignup() {
 
             <div className="form-group">
               <label>Email</label>
-              <input
-                type="email"
-                name="email"
-                value={form.email}
-                onChange={handleChange}
-              />
+              <input type="email" name="email" value={form.email} onChange={handleChange} />
               {errors.email && <div className="error">{errors.email}</div>}
             </div>
 
             <div className="form-group">
               <label>Password</label>
-              <input
-                type="password"
-                name="password"
-                value={form.password}
-                onChange={handleChange}
-              />
-              {errors.password && (
-                <div className="error">{errors.password}</div>
-              )}
+              <input type="password" name="password" value={form.password} onChange={handleChange} />
+              {errors.password && <div className="error">{errors.password}</div>}
             </div>
 
             <button className="ls-submit" type="submit">
@@ -117,7 +102,7 @@ export default function LoginSignup() {
           </form>
 
           <p className="ls-footer">
-            Or
+            Or  
             <button className="link-like" type="button">
               Continue with Google
             </button>

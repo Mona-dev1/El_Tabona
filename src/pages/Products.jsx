@@ -40,6 +40,7 @@ export default function Products({ addToCart }) {
         sort={sort}
         setSort={setSort}
       />
+      
 
       <ProductGrid
         products={products}

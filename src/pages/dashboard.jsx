@@ -13,17 +13,18 @@ export default function Dashboard() {
           <button className="update-btn">Update Profile</button>
         </div>
       </div>
+
       <div className="cards-row">
         <div className="card">
           <h3>Total Orders</h3>
           <div className="value">15</div>
-          <small>Delicious treats enjoyed so far</small>
+          <small className="small">Delicious treats enjoyed so far</small>
         </div>
 
         <div className="card">
           <h3>Loyalty Points</h3>
           <div className="value">350</div>
-          <small>Almost enough for a free cake!</small>
+          <small className="small">Almost enough for a free cake!</small>
         </div>
 
         <div className="card">
@@ -31,7 +32,7 @@ export default function Dashboard() {
           <div className="value" style={{ fontSize: "28px" }}>
             Croissant
           </div>
-          <small>A flaky, buttery delight</small>
+          <small className="small">A flaky, buttery delight</small>
         </div>
       </div>
 
@@ -71,7 +72,7 @@ export default function Dashboard() {
 
           <img src="images/promo.jpg" alt="Promo" />
 
-          <p>
+          <p className="small">
             Embrace the flavors of autumn with our limited-time Pumpkin Spice
             collection!
           </p>

@@ -56,7 +56,6 @@ export default function Header() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-
           <div className="collapse navbar-collapse" id="mainNav">
             <ul className="navbar-nav mx-auto gap-lg-4 mt-3 mt-lg-0">
               <li className="nav-item">

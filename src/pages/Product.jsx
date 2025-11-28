@@ -92,16 +92,16 @@ export default function Product({ addToCart }) {
           </div>
         </div>
 
-        <div className="col-lg-6 product-info text-white">
+        <div className="col-lg-6 product-info ">
           <h2
-            className="mb-3"
+            className="mb-3 product-title"
             style={{ fontFamily: "Pacifico, cursive", fontSize: "30px" }}
           >
             {product.title}
           </h2>
 
           <p className="fw-bold text-warning fs-5">{product.price}</p>
-          <p className="text-white mb-3">{product.desc}</p>
+          <p className=" mb-3">{product.desc}</p>
 
           <div className="mb-3">
             <label className="form-label fw-bold">Size</label>
@@ -124,7 +124,7 @@ export default function Product({ addToCart }) {
             >
               -
             </button>
-            <span className="px-2">{qty}</span>
+            <span className="px-2 qty">{qty}</span>
             <button
               className="btn btn-warning fw-bold"
               onClick={() => setQty((q) => q + 1)}
@@ -154,7 +154,7 @@ export default function Product({ addToCart }) {
         </div>
       </div>
 
-      <Section title="Frequently Bought Together" items={section1} />
+      <Section title="Frequently Bought Together"  items={section1} />
       <Section title="People Also Loved" items={section2} />
 
       {modal3D && (

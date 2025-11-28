@@ -24,7 +24,6 @@ code {
   background: url('/images/cov.jpg') center/cover no-repeat;
   overflow: hidden;
 }
-
 .hero::before {
   content: "";
   position: absolute;
@@ -36,6 +35,7 @@ code {
   background-color: rgba(0, 0, 0, 0.2); 
   z-index: 0;
 }
+
 
 .hero > * {
   position: relative;
@@ -85,7 +85,7 @@ code {
 }
 
 .freshly-baked {
-  background: #1d2024;
+  background-color: #3a2a18;
   padding: 60px 0;
   text-align: center;
   color: white;
@@ -102,7 +102,6 @@ code {
   justify-content: center;
   gap: 35px;
   flex-wrap: wrap;
- 
 }
 
 .baked-card {
@@ -174,7 +173,7 @@ code {
 }
 
 .signature-section {
-  background: #000;
+  background:#2E1C0A;
   padding: 80px 0;
   text-align: center;
 }
@@ -195,7 +194,7 @@ code {
 
 .sig-card {
   width: 320px;
-  background: #1d1d1d;
+  background: #3E2A18;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0,0,0,0.4);
@@ -252,7 +251,7 @@ code {
 }
 .testimonials {
   padding: 60px 20px;
-  background: #1d2024;
+  background-color: #3E2A18;
   text-align: center;
   color: white;
 }
@@ -271,7 +270,7 @@ code {
 }
 
 .card {
-  background: #1f2530;
+  background-color: #3E2A18;
   padding: 25px;
   border-radius: 12px;
   width: 260px;
@@ -292,14 +291,14 @@ code {
 }
 .subscribe {
   padding: 70px 20px;
-  background: #1d2024;
+  background-color: #4E3824;
   color: white;
   display: flex;
   justify-content: center;
 }
 
 .box {
-  background: #1f2530;
+  background-color: #3e2a18;
   padding: 40px 30px;
   border-radius: 15px;
   width: 600px;
@@ -341,10 +340,10 @@ code {
 }
 
 .testimonial-img {
-  width: 100px;          
+  width: 100px;         
   height: 100px;
-  border-radius: 50%;    
-  object-fit: cover;     
+  border-radius: 50%;   
+  object-fit: cover;    
   object-position: center;
   overflow: hidden;
   display: block;
