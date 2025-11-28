@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 export default function Section({ title, items }) {
-  console.log(items);
   return (
     <div className="my-5">
       <h2
